@@ -2,23 +2,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: lightblue;
+  background-color: white;
   background-image: url("./assets/images/bg-enhanced.webp");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   display: grid;
   place-items: center;
-  font-family: "Poppins", sans-serif;
 }
 
 .center {
   --inner-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.2) inset,
     1px -2px 3px 1px rgba(0, 0, 0, 0.2) inset;
-  inline-size: clamp(20%, 18rem, 100%);
+  inline-size: clamp(30%, 18vw, 100%);
   max-inline-size: 320px;
   display: flex;
   flex-direction: column;
@@ -51,19 +52,27 @@ body {
 
 @media (min-width: 1000px) and (min-height: 745px) {
   .center {
-    inline-size: 24rem;
-    max-inline-size: 350px;
+    inline-size: 23rem;
   }
 }
 
 @media (min-width: 1000px) and (min-height: 900px) {
   .center {
-    max-inline-size: 380px;
+    inline-size: 25rem;
+    max-inline-size: 400px;
     padding-block: 3rem;
   }
 }
 
+@media (max-width: 1000px) and (min-height: 700px) {
+  .center {
+    inline-size: clamp(45%, 45vw, 60vw);
+    max-inline-size: 500px;
+  }
+}
+
 form {
+  --letter-spacing: 0.04rem;
   inline-size: 100%;
   display: flex;
   flex-direction: column;
@@ -91,6 +100,9 @@ input {
   padding: 0.2rem 0.5rem;
   outline: none;
   border: none;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: var(--letter-spacing);
 }
 
 label > input {
@@ -102,4 +114,10 @@ button {
   padding: 0.4rem 0.8rem;
   font-weight: 700;
   color: rgb(46 81 155);
+  background-color: rgb(237, 237, 237);
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
 }
