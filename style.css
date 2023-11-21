@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  background-image: url("./assets/images/bg-enhanced.webp");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.center {
+  --inner-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.2) inset,
+    1px -2px 3px 1px rgba(0, 0, 0, 0.2) inset;
+  inline-size: clamp(20%, 18rem, 100%);
+  max-inline-size: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 4px solid white;
+  background-color: rgb(236, 236, 236);
+  background-image: linear-gradient(
+    180deg,
+    rgb(237, 237, 237),
+    rgb(135, 135, 135)
+  );
+  box-shadow: var(--inner-shadow);
+  -webkit-box-shadow: var(--inner-shadow);
+  -moz-box-shadow: var(--inner-shadow);
+  transform: translateY(-2rem);
+  padding: 2rem 1.5rem;
+}
+
+@media (min-height: 820px) {
+  .center {
+    padding-block: 2.5rem;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1724px) and (max-height: 820px) {
+  .center {
+    max-inline-size: 300px;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 745px) {
+  .center {
+    inline-size: 24rem;
+    max-inline-size: 350px;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 900px) {
+  .center {
+    max-inline-size: 380px;
+    padding-block: 3rem;
+  }
+}
+
+form {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.1rem;
+}
+
+a {
+  color: white;
+  font-size: 0.75rem;
+}
+
+input {
+  font-size: clamp(1rem, 1vw, 1.25rem);
+  padding: 0.2rem 0.5rem;
+  outline: none;
+  border: none;
+}
+
+label > input {
+  margin-top: 0.5rem;
+}
+
+button {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+  color: rgb(46 81 155);
+}
